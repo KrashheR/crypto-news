@@ -5,34 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Crypto</title>
 </head>
 <body>
     <header class="page-header">
         <div class="inner inner_header">
-            <img src="images/svg/logo3.svg" class="page-header__logo"> 
-            <nav class="navigation-bar">
-                <input type="checkbox" id="navigation-bar__checkbox" class="navigation-bar__checkbox"/>
-                <label for="navigation-bar__checkbox" class="navigation-bar__hamburger">&#9776;</label>
-                <ul class="navigation-list">
-                    <li class="navigation-list__item"><a href="" class="navigation-list__link navigation-list__link_current">Главная</a></li>
-                    <li class="navigation-list__item"> <a href="" class="navigation-list__link ">Криптовалюты</a>       
-                        <ul class="dropdown">
-                            <li class="dropdown__item"><a href="/" class="dropdown__link">Bitcoin (BTC)</a></li>
-                            <li class="dropdown__item"><a href="/" class="dropdown__link">Ethereum (ETH)</a></li>
-                            <li class="dropdown__item"><a href="/" class="dropdown__link">Cardano (ADA)</a></li>
-                        </ul>
-                    </li>
-                    <li class="navigation-list__item"><a href="" class="navigation-list__link">DeFi</a></li>
-                    <li class="navigation-list__item"><a href="" class="navigation-list__link">Технический анализ</a></li>
-                    <li class="navigation-list__item"><a href="" class="navigation-list__link">Машинное обучение</a>
-                        <ul class="dropdown">
-                            <li class="dropdown__item"><a href="" class="dropdown__link">XGBoost</a></li>
-                            <li class="dropdown__item"><a href="" class="dropdown__link">LSTM</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div class="page-header__left-side">
+                <img src="images/svg/logo3.svg" class="page-header__logo"> 
+                <nav class="navigation-bar">
+                    <input type="checkbox" id="navigation-bar__checkbox" class="navigation-bar__checkbox"/>
+                    <label for="navigation-bar__checkbox" class="navigation-bar__hamburger">&#9776;</label>
+                    <ul class="navigation-list">
+                        <li class="navigation-list__item"><a href="" class="navigation-list__link navigation-list__link_current">Главная</a></li>
+                        <li class="navigation-list__item"> <a href="" class="navigation-list__link ">Криптовалюты</a>       
+                            <ul class="dropdown">
+                                <li class="dropdown__item"><a href="/" class="dropdown__link">Bitcoin (BTC)</a></li>
+                                <li class="dropdown__item"><a href="/" class="dropdown__link">Ethereum (ETH)</a></li>
+                                <li class="dropdown__item"><a href="/" class="dropdown__link">Cardano (ADA)</a></li>
+                            </ul>
+                        </li>
+                        <li class="navigation-list__item"><a href="" class="navigation-list__link">DeFi</a></li>
+                        <li class="navigation-list__item"><a href="" class="navigation-list__link">Технический анализ</a></li>
+                        <li class="navigation-list__item"><a href="" class="navigation-list__link">Машинное обучение</a>
+                            <ul class="dropdown">
+                                <li class="dropdown__item"><a href="" class="dropdown__link">XGBoost</a></li>
+                                <li class="dropdown__item"><a href="" class="dropdown__link">LSTM</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="page-header__right-side ">
+                <form class="search-field search-field_closed" action="" method="get">
+                    <img src="images/search2.png" class="search-field__image">
+                    <input class="search-field__input-text non-display" placeholder="Поиск..." type="search">
+                    <div class="search-field__label">Поиск</div>
+                </form>
+            </div>
         </div>
     </header>
     <main>
@@ -117,7 +129,7 @@
                                     </div>
                                 </div>
                                 <div class="currency-list__button">
-                                    <a href="#">Посмотреть все</a>
+                                    <a href="#">Посмотреть <br> все</a>
                                 </div>
                             </div>
                         </div>
@@ -262,7 +274,7 @@
                 Crypto - журнал о криптовалютах и их анализе.
             </div>
             <div class="page-footer__contacts">
-                Email: ser.kucherencko.ya@yandex.ru
+                Email: nikita.kucherencko.ya@yandex.ru
             </div>
 
         </div>
