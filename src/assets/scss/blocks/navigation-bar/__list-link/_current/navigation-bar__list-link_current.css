@@ -1,0 +1,4 @@
+.navigation-bar__list-link_current {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e5ff00;    
+}

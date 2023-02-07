@@ -1,0 +1,9 @@
+.navigation-bar__checkbox {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navigation-bar__checkbox:checked ~ .navigation-bar__list{
+        display: block;
+    }
+}

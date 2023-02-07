@@ -1,0 +1,106 @@
+.card {
+    position: relative;
+    flex: 1;
+    display: block;
+    box-sizing: border-box;
+    width: 390px;
+    border-radius: 16px;
+    border: 1px solid #d3dced;
+    background-color: #ffffff;
+
+    &:hover {
+        box-shadow: 0 4px 10px rgb(65 84 219 / 10%), 0 4px 5px rgb(61 71 143 / 30%);
+        transition: .2s ease-in-out;
+    }
+
+    &__category {
+        position: absolute;
+        right: 3px;
+        bottom: 2px;
+        display: block;
+        padding: 3px 6px;
+        color: #17181f;
+        font-weight: 400;
+        font-size: 16px;
+
+        @media (max-width: 1200px) {
+            font-size: 1.45vw;
+        }
+
+        &:hover {
+            color: #e5ff00;
+            transition: 0.1s ease;
+        }
+
+        &_white-theme {
+            color: #ffffff;
+        }
+    }
+
+    &__description {
+        display: block;
+        height: auto;
+        margin: 0 15px;
+        padding-top: 12px;
+        line-height: 110%;
+        font-size: 24px;
+
+        @media (max-width: 1200px) {
+            padding-top: 3px;
+        }
+
+        &_big-size{
+            position: absolute;
+            bottom: 24px;
+            color: #ffffff;
+            font-weight: 700;
+
+            @media (max-width: 1200px) {
+                font-size: 1.85vw;
+            }
+        }
+
+        &_medium-size {
+            position: relative;
+            color: #17181f;
+            font-weight: 700;
+            line-height: 120%;
+
+            @media (max-width: 1200px) {
+                font-size: 1.85vw;
+            }
+        }
+
+        &_small-size {
+            position: relative;
+            margin: 0 18px;
+            padding-top: 8px;
+            color: #17181f;
+            font-size: 20px;
+            font-weight: 500;
+
+            @media (max-width: 1200px) {
+                font-size: 1.45vw;
+            }
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+
+        &_half-size {
+            height: 50%;
+            border-radius: 16px 16px 0 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        height: 100%;
+    }
+
+}
+

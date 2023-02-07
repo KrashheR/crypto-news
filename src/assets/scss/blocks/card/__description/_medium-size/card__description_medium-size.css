@@ -1,0 +1,13 @@
+.card__description_medium-size {
+    position: relative;
+    color: #17181f;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+
+@media (max-width: 1200px) {
+    .card__description_medium-size {
+        font-size: 1.85vw;
+    }
+}

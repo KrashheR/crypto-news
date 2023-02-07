@@ -1,0 +1,30 @@
+.page-header {
+    padding: 3px 0;
+    margin: 0;
+    background-color: #17181f;
+    background-size: cover;   
+
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left-side {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+    }
+
+    &__logo {
+        max-width: 50px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }   
+}
+
