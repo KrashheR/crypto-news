@@ -1,0 +1,16 @@
+.inner {
+    display: block;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 0 auto; 
+
+    @media (max-width: $screen-xl) {
+        padding: 0 2rem;
+    }
+
+    @media (max-width: $screen-lg) {
+        width: 630px;
+        padding: 0;
+    }
+
+}

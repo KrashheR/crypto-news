@@ -1,0 +1,16 @@
+.main-page {
+    padding: 15px 0;
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 15px;
+
+        @media (max-width: $screen-lg) {
+            gap: 15;
+        }
+    }
+
+
+}

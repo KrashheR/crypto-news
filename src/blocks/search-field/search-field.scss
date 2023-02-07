@@ -1,0 +1,38 @@
+.search-field {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 4px 6px; 
+    border: 2px solid $color-border-white;
+    border-radius: 16px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__image {
+        max-height: 25px;
+    }
+
+    &__input-text{
+        background-color: $color-background-dark;
+        border: none;
+        color: $color-text-main;
+        font-size: 14px;
+        margin: 0 5px;
+        border: none;
+        appearance: none;
+        outline: none;
+        transition: 1s;
+    }
+
+    &__label{
+        padding: 0 4px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-text-main;
+
+
+    } 
+}
+

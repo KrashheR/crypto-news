@@ -1,0 +1,37 @@
+.row {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    height: 380px;
+    gap: 15px;   
+
+    @media (max-width: $screen-lg) {
+        display: grid;
+        height: 100%;
+    }
+
+    &_3 {
+        height: 380px;
+    
+        @media (max-width: $screen-xl) {    
+            height: 320px;
+        }
+
+        @media (max-width: $screen-lg) {
+            height: 100%;
+        }
+    }
+    
+    &_4 {
+        height: 250px;
+
+        @media (max-width: $screen-xl) {    
+            height: 220px;
+        }
+
+        @media (max-width: $screen-lg) {
+            height: 100%;
+        }
+    } 
+
+}

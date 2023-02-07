@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="assets/sass/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Crypto</title>
+</head>
+<body class="page">
+    <header class="page-header">
+        <div class="inner">
+            <div class="page-header__menu">
+                <div class="page-header__left-side">
+                    <img src="assets/blocks/logo/img/logo.svg" class="page-header__logo logo"> 
+                    <nav class="navigation-bar">
+                        <input type="checkbox" id="navigation-bar__checkbox" class="navigation-bar__checkbox"/>
+                        <label for="navigation-bar__checkbox" class="navigation-bar__hamburger">&#9776;</label>
+                        <ul class="navigation-bar__list">
+                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link navigation-bar__list-link_current link">Главная</a></li>
+                            <li class="navigation-bar__list-item list-item"> <a href="" class="navigation-bar__list-link link">Криптовалюты</a>       
+                                <ul class="navigation-bar__dropdown">
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="/" class="navigation-bar__dropdown-link link">Bitcoin (BTC)</a></li>
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="/" class="navigation-bar__dropdown-link link">Ethereum (ETH)</a></li>
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="/" class="navigation-bar__dropdown-link link">Cardano (ADA)</a></li>
+                                </ul>
+                            </li>
+                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">DeFi</a></li>
+                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">Технический анализ</a></li>
+                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">Машинное обучение</a>
+                                <ul class="navigation-bar__dropdown">
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="" class="navigation-bar__dropdown-link link">XGBoost</a></li>
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="" class="navigation-bar__dropdown-link link">LSTM</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="page-header__right-side">
+                    <form class="search-field search-field_closed" action="" method="get">
+                        <img class="search-field__image" src="assets/blocks/search-field/img/search.webp">
+                        <input class="search-field__input-text non-display" placeholder="Поиск..." type="search">
+                        <div class="search-field__label">Поиск</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-page">
+            <div class="inner">            
+                <div class="main-page__filters"></div>
+                <section class="main-page__grid">
+                    <div class="row row_3">
+                        <div class="card">
+                            <a class="card__link link" href="#">
+                                <img class="card__image" src="assets/blocks/card/img/btc_logo.webp" width="100%" height="100%">
+                                <div class="card__description card__description_big-size">
+                                    Что такое Bitcoin? 
+                                </div>
+                                <a class="link card__category card__category_white-theme link" href="">Криптовалюты</a>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a class="card__link link" href="#">
+                                <img class="card__image" src="assets/blocks/card/img/btc_logo.webp" width="100%" height="100%">
+                                <div class="card__description card__description_big-size">
+                                    Что такое Bitcoin? 
+                                </div>
+                                <a class="card__category card__category_white-theme link" href="">Криптовалюты</a>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card__link link">
+                                <img class="card__image card__image_half-size" src="assets/blocks/card/img/lstm.webp" width="100%" height="100%">
+                                <p class="card__description card__description_medium-size">
+                                    Применение LSTM для прогнозирования цены BTC
+                                </p>
+                                <a href="" class="card__category link">Машинное обучение</a>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="row row_4">
+                        <div class="card">
+                            <a href="#" class="card__link link">
+                                <img class="card__image card__image_half-size" src="assets/blocks/card/img/xgboost.webp" width="100%" height="100%">
+                                <div class="card__description card__description_small-size">
+                                    Применение XGBoost для прогнозирования цены BTC
+                                </div>
+                                <a href="" class="card__category link">Машинное обучение</a>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card__link link">
+                                <img class="card__image card__image_half-size" src="assets/blocks/card/img/frs.webp" width="100%" height="100%">
+                                <div class="card__description card__description_small-size">
+                                    Что такое ФРС и почему она влияет на рынок?
+                                </div>
+                                <a href="" class="card__category link">Криптовалюты</a>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card__link link">
+                                <img class="card__image card__image_half-size" src="assets/blocks/card/img/dash2trade.webp" width="100%" height="100%">
+                                <div class="card__description card__description_small-size">
+                                    Dash 2 Trade - новая монета для анализа и торговли криптовалютой
+                                </div>
+                                <a href=""class="card__category link">DeFi</a>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card__link link">
+                                <img class="card__image card__image_half-size" src="assets/blocks/card/img/rsi.webp" width="100%" height="100%">
+                                <div class="card__description card__description_small-size">
+                                    Как устроен один из самых популярных индикаторов - RSI? 
+                                </div>
+                                <a href="" class="card__category link">Технический анализ</a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row row_3">
+                        <div class="card">
+                            <a href="#" class="card__link link">
+                                <img class="card__image" src="assets/blocks/card/img/btc_logo.webp" width="100%" height="100%">
+                                <div class="card__description card__description_big-size">
+                                    Что такое Bitcoin?   
+                                </div>
+                                <a href="" class="card__category card__category_full-size link">Криптовалюты</a>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <a href="#" class="card__link link">
+                                <img class="card__image card__image_half-size" src="assets/blocks/card/img/lstm.webp" width="100%" height="100%">
+                                <p class="card__description card__description_medium-size">
+                                    Применение LSTM для прогнозирования цены BTC
+                                </p>
+                                <a href="" class="card__category link">Машинное обучение</a>
+                            </a>
+                        </div>
+                        <div class="card">
+                            <div class="currency-list">
+                                <div class="currency-list__title">
+                                Курсы криптовалют на сегодня
+                                </div>
+                                <div class="currency-list__prices">
+                                    <div class="currency">
+                                        <div class="currency__name">
+                                            <span class="currency__first-item">Bitcoin</span>
+                                            <span class="currency__second-item">BTC</span>
+                                        </div>
+                                        <div class="currency__price">
+                                            <span class="currency__first-item">20000$</span>
+                                            <span class="currency__second-item price-up">+2%(+123.12)</span>
+                                        </div>
+                                    </div>
+                                    <div class="currency">
+                                        <div class="currency__name">
+                                            <span class="currency__first-item">Ethereum</span>
+                                            <span class="currency__second-item">ETH</span>
+                                        </div>
+                                        <div class="currency__price">
+                                            <span class="currency__first-item">2000$</span>
+                                            <span class="currency__second-item price-down">-4%(-123.12)</span>
+                                        </div>
+                                    </div>
+                                    <div class="currency">
+                                        <div class="currency__name">
+                                            <span class="currency__first-item">Binance USD</span>
+                                            <span class="currency__second-item">BUSD</span>
+                                        </div>
+                                        <div class="currency__price">
+                                            <span class="currency__first-item">1.001$</span>
+                                            <span class="currency__second-item price-up">+0.1%(+0.00001)</span>
+                                        </div>
+                                    </div>
+                                    <div class="currency">
+                                        <div class="currency__name">
+                                            <span class="currency__first-item">BNB</span>
+                                            <span class="currency__second-item">BNB</span>
+                                        </div>
+                                        <div class="currency__price">
+                                            <span class="currency__first-item">321$</span>
+                                            <span class="currency__second-item price-down">-4%(-2.12)</span>
+                                        </div>
+                                    </div>
+                                    <div class="currency">
+                                        <div class="currency__name">
+                                            <span class="currency__first-item">Ripple</span>
+                                            <span class="currency__second-item">XRP</span>
+                                        </div>
+                                        <div class="currency__price">
+                                            <span class="currency__first-item">0.47$</span>
+                                            <span class="currency__second-item price-down">-4%(-0.12)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="currency-list__button">
+                                    <a href="#">Посмотреть все</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="inner">
+            <ul class="page-footer__navigation">
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Главная</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Криптовалюты</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">DeFi</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Технический анализ</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Машинное обучение</a></li>
+            </ul>
+            <div class="page-footer__flex-container">
+                <img src="assets/blocks/logo/img/logo.svg" class="page-footer__logo logo"> 
+                <div class="page-footer__description">
+                    Crypto - журнал о криптовалютах и их анализе.<br>
+                    Email: nikita.kucherencko.ya@yandex.ru
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
