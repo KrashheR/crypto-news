@@ -6,11 +6,12 @@
     &__checkbox {
         display: none;
     
-        // @media (max-width: 768px) {
-        //     .navigation-bar__checkbox:checked ~ .navigation-bar__list{
-        //         display: block;
-        //     }
-        // }
+        @media (max-width: $screen-md) {
+            display: block;
+            .navigation-bar__checkbox:checked ~ .navigation-bar__list{
+                display: block;
+            }
+        }
     }
     
     &__dropdown {
@@ -24,7 +25,7 @@
         font-size: 14px;   
         cursor: pointer;   
     
-        @media (max-width: 768px) {
+        @media (max-width: $screen-md) {
             left: 50%;
             top: 30px;
             transform: translateX(35%);
@@ -49,7 +50,7 @@
             transition: 0.1s ease;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: $screen-md) {
             &:hover {
                 background-color: $color-main-dark;
             }
@@ -66,7 +67,7 @@
         color: $color-text-main;
         user-select: none;
     
-        @media (max-width: 768px) {
+        @media (max-width: $screen-md) {
             display: block;
             margin-right: 20px;
         }
@@ -81,7 +82,7 @@
         font-weight: 500;
     
        
-        @media (max-width: 768px) {
+        @media (max-width: $screen-md) {
             position: absolute;
             right: 0;
             left: 0;
@@ -102,7 +103,7 @@
             display: block;
         }
     
-        @media (max-width: 768px) {
+        @media (max-width: $screen-md) {
             margin-top: 5px;
         
             &:first-child{
