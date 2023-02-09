@@ -41,6 +41,10 @@
             justify-content: space-around;
             padding-bottom: 20px;
         }
+
+        @media (max-width: $screen-md) {
+            display: none;
+        }
     }
 
     &__navigation-link{

@@ -9,11 +9,12 @@ const sass = require("gulp-sass")(require('sass'));
 const cssnano = require("gulp-cssnano");
 const uglify = require("gulp-uglify");
 const plumber = require("gulp-plumber");
-const notify = require("gulp-notify")
+const notify = require("gulp-notify");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const rigger = require("gulp-rigger");
-const concat = require("gulp-concat")
+const concat = require("gulp-concat");
+const webp = require('gulp-webp');
 const browserSync = require("browser-sync").create();
 
 const srcPath = "src/";
@@ -23,24 +24,21 @@ const distPath = "dist/";
 const path = {
     build: {
         html: distPath,
-        css: distPath + "assets/css/",
+        css: distPath + "assets/sass/",
         js: distPath + "assets/js/",
-        images: distPath + "assets/images/",
-        fonts: distPath + "assets/fonts/"
+        images: distPath + "assets/blocks/"
     },
     src: {
         html: srcPath + "*.html",
-        css: srcPath + "assets/scss/**/*.scss",
-        js: srcPath + "assets/js/**/*.js",
-        images: srcPath + "assets/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}",
-        fonst: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        css: srcPath + "**/*.scss",
+        js: srcPath + "blocks/**/*.js",
+        images: srcPath + "blocks/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}"
     },
     watch: {
-        html: srcPath + "**/*.html",
-        css: srcPath + "assets/scss/**/*.scss",
-        js: srcPath + "assets/js/**/*.js",
-        images: srcPath + "assets/images/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}",
-        fonst: srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        html: srcPath + "*.html",
+        css: srcPath + "**/*.scss",
+        js: srcPath + "blocks/**/*.js",
+        images: srcPath + "blocks/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}"
     },
     clean: "./" + distPath
 }
@@ -60,20 +58,12 @@ function html() {
 }
 
 function css() {
-    return src(path.src.css, {base: srcPath + "assets/scss/"})
-        .pipe(plumber({
-            errorHandler : function(err) {
-                notify.onError({
-                    title: "SCSS Error",
-                    message: "Error: <% error.message %>"
-                })(err);
-                this.emit('end');
-            }
-        }))
+    return src(['src/sass/*.scss', 'src/blocks/**/*.scss'])
+        .pipe(concat("style.css"))    
         .pipe(sass())
         .pipe(autoprefixer())
         .pipe(cssbeautify())
-        .pipe(concat("style.css"))
+        //.pipe(dest(path.build.css))
         .pipe(cssnano({
             zindex: false,
             discardComments: {
@@ -89,7 +79,7 @@ function css() {
 }
 
 function js() {
-    return src(path.src.js, {base: srcPath + "assets/js/"})
+    return src(path.src.js, {base: srcPath + "blocks/"})
         .pipe(plumber())
         .pipe(rigger())
         .pipe(dest(path.build.js))
@@ -103,7 +93,7 @@ function js() {
 }
 
 function images() {
-    return src(path.src.images, {base: srcPath + "assets/images/"})
+    return src(path.src.images, {base: srcPath + "blocks/"})
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
             imagemin.mozjpeg({quality: 80, progressive: true}),
@@ -115,6 +105,7 @@ function images() {
                 ]
             })
         ]))
+        .pipe(webp())
         .pipe(dest(path.build.images))
         .pipe(browserSync.reload({stream: true}))
 }
@@ -123,17 +114,11 @@ function clean() {
     return del(path.clean)
 }
 
-// function fonts() {
-//     return src(path.src.fonts, {base:srcPath + "assets/fonts/"})
-//         .pipe(browserSync.reload({stream: true}))
-// }
-
 function watchFiles() {
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.images], images)
-    // gulp.watch([path.watch.fonts], fonts)
 }
 
 const build = gulp.series(clean, gulp.parallel(html, css, js, images))
@@ -144,7 +129,6 @@ exports.css = css
 exports.js = js
 exports.images = images
 exports.clean = clean
-// exports.fonts = fonts
 exports.build = build
 exports.watch = watch
 exports.default = watch

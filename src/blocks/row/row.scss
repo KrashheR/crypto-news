@@ -1,13 +1,16 @@
 .row {
     display: flex;
     box-sizing: border-box;
-    justify-content: center;
     height: 380px;
     gap: 15px;   
 
     @media (max-width: $screen-lg) {
         display: grid;
         height: 100%;
+    }
+
+    @media (max-width: $screen-md) {
+        
     }
 
     &_3 {

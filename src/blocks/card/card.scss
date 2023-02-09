@@ -9,12 +9,15 @@
     background-color: $color-card-background;
 
     @media (max-width: $screen-lg) {
-        border: 0;
+        border: none;
         border-radius: 0px;
         height: 144px;
         width: 100%;
     }
 
+    @media (max-width: $screen-md) {
+        height: 196px;
+    }
 
     &:hover {
         box-shadow: 0 4px 10px rgb(65 84 219 / 10%), 0 4px 5px rgb(61 71 143 / 30%);
@@ -36,8 +39,8 @@
             font-size: 14px;
         }
 
-        @media (max-width: $screen-lg) {
-            font-size: 14px;
+        @media (max-width: $screen-md) {
+            display: none;
         }
 
         &:hover {
@@ -56,12 +59,13 @@
 
     &__description {
         display: block;
+        position: relative;
         height: auto;
         margin: 0 14px;
-        padding-top: 12px;
+        padding-top: 8px;
         color: $color-text-dark;
         font-weight: 700;
-        line-height: 110%;
+        line-height: 120%;
         font-size: 24px;
         
         @media (max-width: $screen-xl) {
@@ -69,15 +73,24 @@
         }
 
         @media (max-width: $screen-lg) {
-            position: relative;
             display: inline-block;
             width: 292px;
-            bottom: 0;
             margin-right: 0;
             padding-top: 14px;
             vertical-align: top;
-            color: $color-text-dark;
-            font-size: 20px;
+        }
+
+        @media (max-width: $screen-md) {
+            width: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 20px;
+            // // padding: 0 10px;
+            // // vertical-align: baseline;
+            // // height: auto;
+            // margin: 0;
+            z-index: 1;
+            color: $color-text-main;
         }
 
         &_big-size{
@@ -94,34 +107,40 @@
                 bottom: 0;
                 color: $color-text-dark;
             }
+
+            @media (max-width: $screen-md) {
+                position: absolute;
+                bottom: 20px;
+                // right: 0;
+                // width: 100%;
+                color: $color-text-main;
+            }
         }
 
         &_medium-size {
-            position: relative;
-            line-height: 120%;
-
+            
             @media (max-width: $screen-xl) {
                 font-size: 20px;
+            }
+
+            @media (max-width: $screen-md) {
+                // right: 0;
             }
         }
 
         &_small-size {
-            position: relative;
-            margin: 0 18px;
-            padding-top: 8px;
             font-size: 18px;
-            font-weight: 700;
 
             @media (max-width: $screen-xl) {
                 font-size: 16px;
             }
 
             @media (max-width: $screen-lg) {
-                margin-right: 0;
-                padding-top: 14px;
-                bottom: 0;
                 font-size: 20px;
-                color: $color-text-dark;
+            }
+
+            @media (max-width: $screen-md) {
+                color: $color-text-main;
             }
         }
     }
@@ -134,12 +153,12 @@
 
         @media (max-width: $screen-lg) {
             display: inline-block;
-            height: 100%;
             width: 309px;
-            border: 0;
             border-radius: 0px;
-            background-size: cover;
-            background-position: center;
+        }
+
+        @media (max-width: $screen-md) {
+            width: 100%;
         }
 
         &_half-size {
@@ -150,6 +169,11 @@
                 border-radius: 0px;
                 height: 100%;
             }
+
+            // @media (max-width: $screen-md) {
+            //     position: absolute;
+            //     width: 100%;
+            // }
         }
     }
 

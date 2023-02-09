@@ -1,34 +1,27 @@
 .navigation-bar {
-    @media (max-width: $screen-lg) {
-        display: none;
-    }
     
     &__checkbox {
         display: none;
     
-        @media (max-width: $screen-md) {
-            display: block;
-            .navigation-bar__checkbox:checked ~ .navigation-bar__list{
+        @media (max-width: $screen-lg) {
+            &:checked ~ .navigation-bar__list{
                 display: block;
             }
         }
     }
     
     &__dropdown {
+        display: none;
         position: absolute;
         right: 0;
-        z-index: 3;
-        display: none;
+        z-index: 1;
         width: 100%;
-        padding: 0 0;
+        padding: 0;
         background-color: $color-background-dark;
-        font-size: 14px;   
-        cursor: pointer;   
+        font-size: 14px;
     
         @media (max-width: $screen-md) {
-            left: 50%;
-            top: 30px;
-            transform: translateX(35%);
+            
         }   
     }
     
@@ -50,7 +43,7 @@
             transition: 0.1s ease;
         }
         
-        @media (max-width: $screen-md) {
+        @media (max-width: $screen-lg) {
             &:hover {
                 background-color: $color-main-dark;
             }
@@ -66,10 +59,11 @@
         font-size: 24px;
         color: $color-text-main;
         user-select: none;
-    
-        @media (max-width: $screen-md) {
+        
+        @media (max-width: $screen-lg) {
             display: block;
             margin-right: 20px;
+            color: white;
         }
     }
     
@@ -80,41 +74,38 @@
         margin: 0;
         font-size: 16px;
         font-weight: 500;
-    
        
-        @media (max-width: $screen-md) {
+        @media (max-width: $screen-lg) {
             position: absolute;
-            right: 0;
+            margin-top: 10px;
             left: 0;
+            right: 0;
             display:none;
-            padding: 16px 0;
+            z-index: 1;
+            padding: 5px 0;
             text-align: center;
             background-color: $color-background-dark;
+            
         }
+
+        @media (max-width: $screen-lg) {
+            display: none;
+        }
+
     }
     
     &__list-item {
         position: relative;
         padding: 0 7px;
         text-align: center;
-        
 
         &:hover .navigation-bar__dropdown{
             display: block;
         }
     
-        @media (max-width: $screen-md) {
-            margin-top: 5px;
-        
-            &:first-child{
-                margin-top: 0px;
-            }
-        
-            &:hover {
-                display: inline-block;
-                background-color:$color-main-dark;
-                transition: 0.3s ease;
-            }
+        @media (max-width: $screen-lg) {
+            padding: 10px 40px;
+            
         }
     }
     
@@ -129,6 +120,10 @@
         &_current{
             padding-bottom: 8px;
             border-bottom: 1px solid $color-main;  
+
+            @media (max-width: $screen-lg) { 
+                border-bottom: 0;
+            }
         }
     }
 }

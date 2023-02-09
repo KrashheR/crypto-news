@@ -13,4 +13,9 @@
         padding: 0;
     }
 
+    @media (max-width: $screen-md) {
+        width: calc(100% - 26px);
+    }
+
+    
 }
