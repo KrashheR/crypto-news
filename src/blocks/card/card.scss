@@ -7,7 +7,7 @@
     border-radius: 16px;
     border: 1px solid $color-border;
     background-color: $color-card-background;
-
+    
     @media (max-width: $screen-lg) {
         border: none;
         border-radius: 0px;
@@ -34,6 +34,7 @@
         color: $color-text-dark;
         font-weight: 400;
         font-size: 16px;
+        z-index: 2;
 
         @media (max-width: $screen-xl) {
             font-size: 14px;
@@ -67,6 +68,8 @@
         font-weight: 700;
         line-height: 120%;
         font-size: 24px;
+        z-index: 2;
+        
         
         @media (max-width: $screen-xl) {
             padding-top: 3px;
@@ -83,14 +86,10 @@
         @media (max-width: $screen-md) {
             width: 100%;
             position: absolute;
-            right: 0;
-            bottom: 20px;
-            // // padding: 0 10px;
-            // // vertical-align: baseline;
-            // // height: auto;
-            // margin: 0;
-            z-index: 1;
+            right: -8px;
+            bottom: 8px;
             color: $color-text-main;
+
         }
 
         &_big-size{
@@ -110,9 +109,7 @@
 
             @media (max-width: $screen-md) {
                 position: absolute;
-                bottom: 20px;
-                // right: 0;
-                // width: 100%;
+                bottom: 8px;
                 color: $color-text-main;
             }
         }
@@ -169,18 +166,44 @@
                 border-radius: 0px;
                 height: 100%;
             }
-
-            // @media (max-width: $screen-md) {
-            //     position: absolute;
-            //     width: 100%;
-            // }
         }
+
     }
 
     &__link {
         display: block;
         height: 100%;
+
+        @media (max-width: $screen-md) {
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0; 
+                left: 0;
+                z-index: 1;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 70%);
+            }
+        }
+
+        &_big {
+            @media (min-width: $screen-lg) {
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0; 
+                    left: 0;
+                    border-radius: 0 0 16px 16px;
+                    z-index: 1;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 50%);   
+                }
+            }
+        }
     }
+
 
 }
 
