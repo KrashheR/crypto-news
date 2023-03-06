@@ -29,13 +29,13 @@ const path = {
         images: distPath + "assets/blocks/"
     },
     src: {
-        html: srcPath + "*.html",
+        html: srcPath + "**/*.html",
         css: srcPath + "**/*.scss",
         js: srcPath + "blocks/**/*.js",
         images: srcPath + "blocks/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}"
     },
     watch: {
-        html: srcPath + "*.html",
+        html: srcPath + "**/*.html",
         css: srcPath + "**/*.scss",
         js: srcPath + "blocks/**/*.js",
         images: srcPath + "blocks/**/*.{jpg,jpeg,png,svg,gif,ico,webp,xml}"

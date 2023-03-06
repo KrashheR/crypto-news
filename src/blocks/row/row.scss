@@ -9,11 +9,7 @@
         height: 100%;
     }
 
-    @media (max-width: $screen-md) {
-        
-    }
-
-    &_3 {
+    &_big {
         height: 380px;
     
         @media (max-width: $screen-xl) {    
@@ -25,7 +21,7 @@
         }
     }
     
-    &_4 {
+    &_small {
         height: 250px;
 
         @media (max-width: $screen-xl) {    

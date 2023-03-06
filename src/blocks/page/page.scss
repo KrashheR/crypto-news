@@ -1,6 +1,10 @@
 .page {
     margin: 0;
     box-sizing: border-box;
-    background-color: $color-background;
+    background-color: $color-background-white;
     font-family: $font-family;
+
+    &_home {
+        background-color: $color-background;
+    }
 }

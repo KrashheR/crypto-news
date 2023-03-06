@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/assets/sass/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Crypto</title>
+</head>
+<body class="page">
+    <header class="page-header">
+        <div class="inner">
+            <div class="page-header__menu">
+                <div class="page-header__left-side">
+                    <a class="page-header__logo-link" href="index.html"><img src="assets/blocks/logo/img/logo.svg" class="page-header__logo logo"></a>
+                    <nav class="navigation-bar">
+                        <input type="checkbox" id="navigation-bar__checkbox" class="navigation-bar__checkbox"/>
+                        <label for="navigation-bar__checkbox" class="navigation-bar__hamburger">&#9776;</label>
+                        <ul class="navigation-bar__list">
+                            <li class="navigation-bar__list-item list-item"><a href="index.html" class="navigation-bar__list-link link">Главная</a></li>
+                            <li class="navigation-bar__list-item list-item"> <a href="" class="navigation-bar__list-link navigation-bar__list-link_current link">Криптовалюты</a>       
+                                <ul class="navigation-bar__dropdown">
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="btc.html" class="navigation-bar__dropdown-link link">Bitcoin (BTC)</a></li>
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="/" class="navigation-bar__dropdown-link link">Ethereum (ETH)</a></li>
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="/" class="navigation-bar__dropdown-link link">Cardano (ADA)</a></li>
+                                </ul>
+                            </li>
+                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">DeFi</a></li>
+                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">Технический анализ</a></li>
+                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">Машинное обучение</a>
+                                <ul class="navigation-bar__dropdown">
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="" class="navigation-bar__dropdown-link link">XGBoost</a></li>
+                                    <li class="navigation-bar__dropdown-item list-item"><a href="" class="navigation-bar__dropdown-link link">LSTM</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <img src="assets/blocks/logo/img/logo.svg" class="page-header__mobile-logo logo">
+                <div class="page-header__right-side">
+                    <form class="search-field" action="" method="get">
+                        <input class="search-field__input-text" placeholder="Поиск..." type="search">
+                        <img class="search-field__image" src="assets/blocks/search-field/img/search.webp">
+                        <div class="search-field__label"></div>
+                    </form>
+
+                    <form class="search-field search-field_mobile" action="" method="get">
+                        <input class="search-field__input-text search-field__input-text_mobile" placeholder="Поиск..." type="search">
+                        <div class="search-field__label">Найти</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="page-header__progress-bar non-display">
+            <div class="page-header__progress-handle">
+            </div>
+        </div>
+    </header>
+    <main class="page-main">
+        <div class="inner">     
+            <aside class="sidebar sidebar_right">
+                <div class="sidebar__navigation">
+                    <h3 class="sidebar__navigation-header">В этой статье</h3>
+                    <ul class="sidebar__navigation-list">
+                        <li class="sidebar__navigation-item"><a class="sidebar__navigation-link link" href="#description">Описание</a></li>
+                        <li class="sidebar__navigation-item"><a class="sidebar__navigation-link link" href="#how_it_works">Как устроен Bitcoin</a></li>
+                        <li class="sidebar__navigation-item"><a class="sidebar__navigation-link link" href="#features">Особенности Bitcoin</a></li>
+                        <li class="sidebar__navigation-item"><a class="sidebar__navigation-link link" href="#prospects">Перспективы монеты в ближайшем будущем</a></li>
+                    </ul>
+                    
+                <div/>
+                <div class="sidebar__additional-materials">
+                </div>
+            </aside>       
+            <article class="post-content">
+                <h1 class="post-content__title">Что такое Bitcoin? 10 Фактов о главной криптовалюте мира</h1>
+                <figure class="post-content__figure">
+                    <img class="post-content__image" src="assets/blocks/card/img/btc_logo.webp" alt="Что такое Bitcoin? 10 Фактов о главной криптовалюте мира">
+                </figure>
+                <section class="post-content__section" aria-labelledby="description" id="description">
+                    <p class="post-content__text">Bitcoin - это первая и самая известная криптовалюта в мире. Его создал анонимный автор под псевдонимом Сатоши Накамото в 2008 году. Bitcoin отличается от традиционных валют, таких как доллары или евро, тем, что он не имеет централизованного контроля. Вместо этого, он управляется децентрализованной сетью компьютеров, которые работают вместе, чтобы обеспечить безопасность транзакций и создать новые блоки в цепочке блоков, известной как блокчейн.</p>
+                </section>
+                <section class="post-content__section" id="how_it_works">
+                    <h2>Как работает Bitcoin?</h2>
+                    <p class="post-content__text">Bitcoin использует криптографию для обеспечения безопасности транзакций и создания новых блоков в цепочке блоков. Когда кто-то отправляет биткоины другому человеку, транзакция отправляется в сеть компьютеров, которые работают вместе, чтобы проверить транзакцию и убедиться в том, что у отправителя достаточно биткоинов для выполнения транзакции.</p>
+                    <p class="post-content__text">Когда транзакция проверена, она добавляется в новый блок в цепочке блоков. Каждый блок содержит несколько транзакций и ссылку на предыдущий блок в цепочке. Это обеспечивает безопасность блокчейна, так как для изменения любого блока в цепочке необходимо изменить все последующие блоки.</p>
+                    <p class="post-content__text">Для того чтобы создать новый блок, компьютеры в сети решают сложные математические задачи, которые требуют больших вычислительных мощностей. Компьютер, который решает задачу, получает вознаграждение в виде новых биткоинов, что также является механизмом поощрения за поддержание безопасности сети.</p>
+                </section>
+                <section class="post-content__section" aria-labelledby="features">
+                <h2>Особенности Bitcoin</h2>
+                    <p class="post-content__text">Bitcoin имеет несколько особенностей, которые делают его уникальным:</p>
+                    <ul class="post-content__list">
+                        <li class="post-content__list-item">Децентрализация: Bitcoin не имеет центрального управления или контроля, что делает его более устойчивым к цензуре и контролю.</li>
+                        <li class="post-content__list-item">Анонимность: При использовании Bitcoin можно оставаться анонимным, так как адреса кошельков не связаны с личными данными.</li>
+                        <li class="post-content__list-item">Безопасность: Bitcoin использует криптографию для обеспечения безопасности транзакций и защиты блокчейна от мошенничества.</li>
+                        <li class="post-content__list-item">Ограниченный объем: Количество биткоинов, которые будут созданы, ограничено до 21 миллиона. Это означает, что с течением времени добыча биткоинов становится все более сложной, и что их стоимость, вероятно, будет расти в долгосрочной перспективе.</li>
+                        <li class="post-content__list-item">Быстрота транзакций: Транзакции Bitcoin могут быть выполнены практически мгновенно, и они не подвержены задержкам, которые часто возникают в случае с традиционными банковскими переводами.</li>
+                    </ul>
+                </section>
+                <section class="post-content__section" aria-labelledby="prospects">
+                    <h2>Перспективы Bitcoin</h2>
+                    <p class="post-content__text">Bitcoin имеет огромный потенциал как средство хранения стоимости и средство платежей. Он также может быть использован как средство для перевода денег в международном масштабе, так как его стоимость не зависит от валютных колебаний.</p>    
+                    <p class="post-content__text">Однако, Bitcoin сталкивается с некоторыми вызовами, такими как высокие комиссии за транзакции и сомнительный статус регулирования во многих странах. Тем не менее, сеть Bitcoin продолжает развиваться и улучшаться, в том числе благодаря усилиям разработчиков и сообщества.</p>
+                    <p class="post-content__text">Некоторые эксперты считают, что Bitcoin может стать будущим золотом, где люди будут хранить свои сбережения в виде криптовалюты. Другие предсказывают, что в будущем Bitcoin может стать главной мировой валютой.</p>   
+                    <p class="post-content__text">В целом, Bitcoin является уникальным и инновационным проектом, который продолжает привлекать внимание людей во всем мире. Его технология блокчейн уже используется во многих отраслях и является обещающей технологией для будущего.</p>
+                </section>
+            </article>
+            <section class="additional-posts">
+                <h2>Материалы по теме</h2>
+                <div class="row row_small">
+                    <div class="card">
+                        <a href="#" class="card__link link">
+                            <img class="card__image card__image_half-size" src="assets/blocks/card/img/xgboost.webp" width="100%" height="100%">
+                            <div class="card__description card__description_small-size">
+                                Применение XGBoost для прогнозирования цены BTC
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="card__link link">
+                            <img class="card__image card__image_half-size" src="assets/blocks/card/img/lstm.webp" width="100%" height="100%">
+                            <p class="card__description card__description_small-size">
+                                Применение LSTM для прогнозирования цены BTC
+                            </p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="card__link link">
+                            <img class="card__image card__image_half-size" src="assets/blocks/card/img/xgboost.webp" width="100%" height="100%">
+                            <div class="card__description card__description_small-size">
+                                Применение XGBoost для прогнозирования цены BTC
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="#" class="card__link link">
+                            <img class="card__image card__image_half-size" src="assets/blocks/card/img/frs.webp" width="100%" height="100%">
+                            <div class="card__description card__description_small-size">
+                                Что такое ФРС и почему она влияет на рынок?
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="inner">
+            <ul class="page-footer__navigation">
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Главная</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Криптовалюты</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">DeFi</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Технический анализ</a></li>
+                <li class="page-footer__navigation-item list-item"><a href="" class="page-footer__navigation-link link">Машинное обучение</a></li>
+            </ul>
+            <div class="page-footer__flex-container">
+                <img src="assets/blocks/logo/img/logo.svg" class="page-footer__logo logo"> 
+                <div class="page-footer__description">
+                    Crypto - журнал о криптовалютах и их анализе.<br>
+                    Email: nikita.kucherencko.ya@yandex.ru
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

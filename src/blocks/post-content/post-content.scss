@@ -1,0 +1,51 @@
+.post-content {
+    position: relative;
+    width: 780px;
+
+    &__title {
+        margin-top: 10px;
+        font-size: 32px;
+    }
+
+    &__text {
+        margin-bottom: 0;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: .02em;
+        color: $color-text-dark;
+    }
+
+    &__figure {
+        display: block;
+        height: 260px;
+        overflow: hidden;
+        position: relative;
+        margin: 0;
+        margin-top: 18px;
+    }
+
+    &__image {
+        position: absolute;
+        top: -273.406px;
+        min-width: 100%;
+        max-width: 100%;
+        height: auto; 
+    }
+
+    &__list {
+        margin: 0;
+        padding-left: 30px;
+        list-style-position: inside;
+    }
+
+    &__list-item {
+        padding: 6px 0;
+        font-size: 18px;
+
+        &::marker {
+            color: $color-main-dark;
+            font-size: 25px;
+        }
+    }
+
+}
