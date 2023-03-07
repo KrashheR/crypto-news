@@ -1,10 +1,18 @@
 .post-content {
     position: relative;
-    width: 780px;
+    max-width: 780px;
+
+    @media (max-width: $screen-xl) {
+        max-width: 680px;
+    }
 
     &__title {
         margin-top: 10px;
         font-size: 32px;
+
+        @media (max-width: $screen-sm) {
+            font-size: 30px;
+        }
     }
 
     &__text {
@@ -22,6 +30,13 @@
         position: relative;
         margin: 0;
         margin-top: 18px;
+
+        @media (max-width: $screen-md) {
+            display: inline-block;
+            height: auto;
+            overflow: visible;
+            margin: 0;
+        }
     }
 
     &__image {
@@ -30,6 +45,13 @@
         min-width: 100%;
         max-width: 100%;
         height: auto; 
+
+        @media (max-width: $screen-md) {
+            position: relative;
+            display: inline-block;
+            top: 0;
+            max-height: fit-content;
+        }
     }
 
     &__list {

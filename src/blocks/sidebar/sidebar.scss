@@ -1,6 +1,14 @@
 .sidebar {
-    width: 390px;
+    max-width: 390px;
     
+    @media (max-width: $screen-xl) {
+        max-width: 250px;
+    }
+
+    @media (max-width: $screen-lg) {
+        display: none;
+    }
+
     &_right {
         position: sticky;
         float: right;

@@ -6,6 +6,11 @@
     background-color: $color-background-dark;
     background-size: cover;
 
+    @media (max-width: $screen-sm) {
+        font-size: 14px;
+        word-break: break-all
+    }
+
     &__contacts {
         position: relative;
         float: left;

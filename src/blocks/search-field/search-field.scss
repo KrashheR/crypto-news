@@ -10,13 +10,9 @@
         border: none;
     }
 
-    &:hover {
-        cursor: pointer;
-    }
-
     &_mobile {
-        position: absolute;
         display: none;
+        position: absolute;
         left: 0;
         right: 0;
         z-index: 3;
@@ -27,10 +23,11 @@
 
     &__image {
         max-height: 25px;
+        padding-right: 8px;
     }
 
     &__input-text{
-        width: 200px;
+        width: 80px;
         padding: 7px;
         border: none;
         border-radius: 15px;
@@ -44,6 +41,10 @@
         @media (max-width: $screen-lg) {
             display: none;
         }
+        
+        &:focus {
+            width: 200px;
+        }
 
         &_mobile {
             display: block;
@@ -55,21 +56,41 @@
             text-align: center;
             font-size: 18px;
             background-color: $color-background-white;
-            color: $color-text-dark;    
+            color: $color-text-dark;
+            
+            &:focus {
+                width: 100%;
+            }
         }
     }
 
     &__button{
-        height: 36px;
+        height: 25px;
+        width: 25px;
         border: 0;
-        outline: 0;        
+        outline: 0;
+        margin-right: 8px;        
         padding: 0;
-        width: 100%;
-        text-align: center;
-        font-size: 14px;
-        color: $color-text-dark;
-        text-transform: uppercase;
-        background: linear-gradient(180deg, $color-main 0, $color-main-dark 100%);
+        background: url(../blocks/search-field/img/search.webp) no-repeat right center;
+        background-size: 100%;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &_mobile {
+            height: 36px;
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            color: $color-text-dark;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, $color-main 0, $color-main-dark 100%);
+        
+            &:hover {
+                cursor: pointer;
+            }
+        }
     } 
 
     &__popup {
