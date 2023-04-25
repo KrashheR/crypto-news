@@ -1,7 +1,0 @@
-.row {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    max-height: 380px;
-    margin: 15px 0;
-}

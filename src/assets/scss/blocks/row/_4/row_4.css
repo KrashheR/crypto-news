@@ -1,9 +1,0 @@
-.row_4 {
-    height: 250px;
-}
-
-@media (max-width: 1200px) {    
-    .row_4 {
-        max-height: 220px;
-    }
-}

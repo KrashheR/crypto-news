@@ -11,49 +11,43 @@
     <title>Crypto</title>
 </head>
 <body class="page page_home">
-    <header class="page-header">
+    <header class="header">
         <div class="inner">
-            <div class="page-header__menu">
-                <div class="page-header__left-side">
-                    <a class="page-header__logo-link" href="index.html"><img src="assets/blocks/logo/img/logo.svg" class="page-header__logo logo"></a> 
-                    <nav class="navigation-bar">
-                        <input type="checkbox" id="navigation-bar__checkbox" class="navigation-bar__checkbox"/>
-                        <label for="navigation-bar__checkbox" class="navigation-bar__hamburger">&#9776;</label>
-                        <ul class="navigation-bar__list">
-                            <li class="navigation-bar__list-item list-item"><a href="index.html" class="navigation-bar__list-link navigation-bar__list-link_current link">Главная</a></li>
-                            <li class="navigation-bar__list-item list-item"> <a href="" class="navigation-bar__list-link link">Криптовалюты</a>       
-                                <ul class="navigation-bar__dropdown">
-                                    <li class="navigation-bar__dropdown-item list-item"><a href="btc.html" class="navigation-bar__dropdown-link link">Bitcoin (BTC)</a></li>
-                                    <li class="navigation-bar__dropdown-item list-item"><a href="/" class="navigation-bar__dropdown-link link">Ethereum (ETH)</a></li>
-                                    <li class="navigation-bar__dropdown-item list-item"><a href="/" class="navigation-bar__dropdown-link link">Cardano (ADA)</a></li>
-                                </ul>
-                            </li>
-                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">DeFi</a></li>
-                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">Технический анализ</a></li>
-                            <li class="navigation-bar__list-item list-item"><a href="" class="navigation-bar__list-link link">Машинное обучение</a>
-                                <ul class="navigation-bar__dropdown">
-                                    <li class="navigation-bar__dropdown-item list-item"><a href="" class="navigation-bar__dropdown-link link">XGBoost</a></li>
-                                    <li class="navigation-bar__dropdown-item list-item"><a href="" class="navigation-bar__dropdown-link link">LSTM</a></li>
-                                </ul>
-                            </li>
+            <nav class="navigation">
+                <a href="index.html" class="navigation__logo-link">
+                    <img class="navigation__logo-image logo" src="assets/blocks/logo/img/logo.svg">
+                </a>
+                <button class="navigation__hamburger" type="button">&#9776;</button>
+                <ul class="navigation__list">
+                    <li class="navigation__list-item list-item">
+                        <a href="index.html" class="navigation__list-link navigation__list-link_current link">Главная</a>
+                    </li>
+                    <li class="navigation__list-item list-item"> <a href="" class="navigation__list-link link">Криптовалюты</a>       
+                        <ul class="navigation__dropdown">
+                            <li class="navigation__dropdown-item list-item"><a href="btc.html" class="navigation__dropdown-link link">Bitcoin (BTC)</a></li>
+                            <li class="navigation__dropdown-item list-item"><a href="/" class="navigation__dropdown-link link">Ethereum (ETH)</a></li>
+                            <li class="navigation__dropdown-item list-item"><a href="/" class="navigation__dropdown-link link">Cardano (ADA)</a></li>
                         </ul>
-                    </nav>
-                </div>
-                <img src="assets/blocks/logo/img/logo.svg" class="page-header__mobile-logo logo">
-                <div class="page-header__right-side">
-                    <form class="search-field" action="" method="get">
-                        <input class="search-field__input-text" placeholder="Поиск..." type="search">
-                        <input class="search-field__button" type="submit" value=""></input>
-                    </form>
-
-                    <form class="search-field search-field_mobile" action="" method="get">
-                        <div class="search-field__popup">
-                            <input class="search-field__input-text search-field__input-text_mobile" type="text" placeholder="Поиск...">
-                            <input class="search-field__button_mobile" type="submit" value="Найти">
-                        </div>
-                    </form>
-                </div>
-            </div>
+                    </li>
+                    <li class="navigation__list-item list-item">
+                        <a href="" class="navigation__list-link link">DeFi</a>
+                    </li>
+                    <li class="navigation__list-item list-item">
+                        <a href="" class="navigation__list-link link">Технический анализ</a>
+                    </li>
+                    <li class="navigation__list-item list-item"> <a href="" class="navigation__list-link link">Машинное обучение</a>
+                        <ul class="navigation__dropdown">
+                            <li class="navigation__dropdown-item list-item"><a href="" class="navigation__dropdown-link link">XGBoost</a></li>
+                            <li class="navigation__dropdown-item list-item"><a href="" class="navigation__dropdown-link link">LSTM</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <img class="navigation__mobile-logo logo" src="assets/blocks/logo/img/logo.svg" alt="Crypto">
+                <form class="search-field__form" action="" method="get">
+                  <input class="search-field__input-text" placeholder="Поиск..." type="search">
+                  <button class="search-field__button" type="submit" title="Поиск"></button>
+                </form>               
+            </nav>
         </div>
     </header>
     <main class="page-main">
